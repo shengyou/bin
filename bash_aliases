@@ -70,6 +70,10 @@ function ring() {
             bash ~/bin/ring/install.sh ;;
         provision)
             bash ~/bin/ring/provision.sh ;;
+        import)
+            bash ~/bin/ring/import.sh ;;
+        export)
+            bash ~/bin/ring/export.sh ;;
         *)
             echo "Usage: ring [command]" ;;
     esac
