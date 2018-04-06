@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-git clone git@github.com:shengyou/dotfile.git ~/bin
+git clone https://github.com/shengyou/dotfile.git ~/bin
 ~/bin/install.sh
 ```
 
