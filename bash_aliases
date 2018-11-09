@@ -78,3 +78,69 @@ function ring() {
             echo "Usage: ring [command]" ;;
     esac
 }
+
+function hub() {
+    case "$1" in
+        up|start)
+            bash ~/JetBrainsRing/apps/hub/bin/hub.sh start ;;
+        down|halt|stop)
+            bash ~/JetBrainsRing/apps/hub/bin/hub.sh stop ;;
+        *)
+            echo "Usage: hub [command]" ;;
+    esac
+}
+
+function youtrack() {
+    case "$1" in
+        up|start)
+            bash ~/JetBrainsRing/apps/youtrack/bin/youtrack.sh start ;;
+        down|halt|stop)
+            bash ~/JetBrainsRing/apps/youtrack/bin/youtrack.sh stop ;;
+        *)
+            echo "Usage: youtrack [command]" ;;
+    esac
+}
+
+function upsource() {
+    case "$1" in
+        up|start)
+            bash ~/JetBrainsRing/apps/upsource/bin/upsource.sh start ;;
+        down|halt|stop)
+            bash ~/JetBrainsRing/apps/upsource/bin/upsource.sh stop ;;
+        *)
+            echo "Usage: upsource [command]" ;;
+    esac
+}
+
+function teamcity() {
+    case "$1" in
+        up|start)
+            bash ~/JetBrainsRing/apps/teamcity/bin/runAll.sh start ;;
+        down|halt|stop)
+            bash ~/JetBrainsRing/apps/teamcity/bin/runAll.sh stop ;;
+        *)
+            echo "Usage: teamcity [command]" ;;
+    esac
+}
+
+function agent1() {
+    case "$1" in
+        up|start)
+            bash ~/JetBrainsRing/apps/agent1/bin/agent.sh start ;;
+        down|halt|stop)
+            bash ~/JetBrainsRing/apps/agent1/bin/agent.sh stop ;;
+        *)
+            echo "Usage: agent1 [command]" ;;
+    esac
+}
+
+function agent2() {
+    case "$1" in
+        up|start)
+            bash ~/JetBrainsRing/apps/agent2/bin/agent.sh start ;;
+        down|halt|stop)
+            bash ~/JetBrainsRing/apps/agent2/bin/agent.sh stop ;;
+        *)
+            echo "Usage: agent2 [command]" ;;
+    esac
+}

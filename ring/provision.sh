@@ -32,7 +32,7 @@ echo "HRNGDEVICE=/dev/urandom" >> /etc/default/rng-tools
 /etc/init.d/rng-tools start
 
 # install Java
-apt-get install -y default-jre
+apt-get install -y openjdk-8-jdk
 
 # install PHP
 apt-add-repository ppa:ondrej/php -y
@@ -73,7 +73,7 @@ php5.6-intl php5.6-readline php5.6-mcrypt
 
 update-alternatives --set php /usr/bin/php7.2
 
-wget https://getcomposer.org/download/1.6.3/composer.phar
+wget https://getcomposer.org/download/1.7.2/composer.phar
 mv composer.phar /usr/local/bin/composer
 chmod +x /usr/local/bin/composer
 
@@ -90,8 +90,7 @@ apt-get -y autoremove
 
 # prepare worker space
 # https://unix.stackexchange.com/questions/118317/run-script-as-a-different-user-from-root
-su -c 'mkdir -p /home/worker/.ssh' - worker
-su -c 'echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCsCDlqhjtgsWdmSAOpn6amdPpfQtdSyZwusdeQ7yOQvK6Yck/0i8ORnPTNk8JUDeLygPzqJ91OkxUsXPGKKB5tWLNjPGusEQ5h8m+1wvBa3ZFWsDG4X166ZW2KVmzGJskJbXKXfuiaNa6qGi/yTCVV0ZRSPRG3DKS2h67P+w3OkK7T7w19zvQhLJZN2e625KvANPtMsXEPPsb6eDQ80P8K8NF16w3hTU69Z2SCKpRLeKe36WD+ItYrlB9bV/f4uGe2LYIzBxjiaUKv4ZJFm0DXvdps+ckGR0Oh0uRLkM5aRrvkC/4ISdasWcOyTCB29sD8nX8DUT9LPVba1+nOEGGZGsFkTO+QND7Ji6egWeqVayn6ujP/LF3oOPVWD3QWptbFiWsZnjuDaghqb1vwNvYgAqVeX8cOJTh54qNP7BT+t3mj0u/khjhgxTiliWSaZ+fcc7d41ympnNvkA27Ex2kUY/4msr982kxPKHMJA1FcdMR2KRyQoCUp3Mwd4bxc4I7VhGlfS+qDlY38cYbWY5nnY6FY5BdZrrz+vR129dPs3Tn9/6Vj67dgCKNtwL1jlUu1WrdX7s949qrFMuHKf4piQDb7Bseke82SsKgm5l/K+wgfDpQyZ3r+FA/INCt7q+4kaMN3KuvSyWZ4xZNss8iVdaH+B1JvfZUfQC2y/PI14w== shengyoufan@gmail.com" >> /home/worker/.ssh/authorized_keys' - worker
-su -c 'git clone https://github.com/shengyou/dotfile.git /home/worker/bin' - worker
-su -c 'bash /home/worker/bin/install.sh' - worker
-
+#su -c 'mkdir -p /home/worker/.ssh' - worker
+#su -c 'echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCsCDlqhjtgsWdmSAOpn6amdPpfQtdSyZwusdeQ7yOQvK6Yck/0i8ORnPTNk8JUDeLygPzqJ91OkxUsXPGKKB5tWLNjPGusEQ5h8m+1wvBa3ZFWsDG4X166ZW2KVmzGJskJbXKXfuiaNa6qGi/yTCVV0ZRSPRG3DKS2h67P+w3OkK7T7w19zvQhLJZN2e625KvANPtMsXEPPsb6eDQ80P8K8NF16w3hTU69Z2SCKpRLeKe36WD+ItYrlB9bV/f4uGe2LYIzBxjiaUKv4ZJFm0DXvdps+ckGR0Oh0uRLkM5aRrvkC/4ISdasWcOyTCB29sD8nX8DUT9LPVba1+nOEGGZGsFkTO+QND7Ji6egWeqVayn6ujP/LF3oOPVWD3QWptbFiWsZnjuDaghqb1vwNvYgAqVeX8cOJTh54qNP7BT+t3mj0u/khjhgxTiliWSaZ+fcc7d41ympnNvkA27Ex2kUY/4msr982kxPKHMJA1FcdMR2KRyQoCUp3Mwd4bxc4I7VhGlfS+qDlY38cYbWY5nnY6FY5BdZrrz+vR129dPs3Tn9/6Vj67dgCKNtwL1jlUu1WrdX7s949qrFMuHKf4piQDb7Bseke82SsKgm5l/K+wgfDpQyZ3r+FA/INCt7q+4kaMN3KuvSyWZ4xZNss8iVdaH+B1JvfZUfQC2y/PI14w== shengyoufan@gmail.com" >> /home/worker/.ssh/authorized_keys' - worker
+#su -c 'git clone https://github.com/shengyou/dotfile.git /home/worker/bin' - worker
+#su -c 'bash /home/worker/bin/install.sh' - worker
